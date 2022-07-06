@@ -1,0 +1,68 @@
+/* global style */
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fefefe;
+}
+body{
+    min-height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+header{
+    position: absolute;
+    inset:0 50%;
+}
+header>nav{
+    display: flex;
+    justify-content: space-around;
+}
+header>nav>a{
+    margin:0.5em 1em ;
+}
+aside{
+    padding: 2em 1em 1em;
+    background-image: url(./img/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+
+}
+aside>p,a,h1{
+    margin: 1em;
+    font-weight: bold;
+    background-color: transparent;
+    color: #fefefe;
+}
+aside>a,h1{
+    text-align: center;
+}
+footer{
+    background-color: #04086b;
+}
+/* index styles (home page) */
+.types{
+    margin: 1em auto;
+    border-bottom: 2px solid #121212;
+    width: 80vw;
+}
+.types>h3{
+    font-size: 48px;
+}
+.types>a{
+    color: #121212;
+}
+/* page of about us style */
+.about-page{
+    padding: 2em 1em 1em;
+    background-image: url(./img/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    font-weight: bold;
+}
+.about-page>div,p,h2,h5,a{
+    background: transparent;
+    color: #fefefe;
+    margin: 2em;
+}
