@@ -72,6 +72,10 @@ footer>div{
     margin: 1em;
     color: #121212;
 }
+/* store's part  */
+body>div>h2{
+    color: #121212;
+}
 /* page of about us style */
 .about-page{
     padding: 2em 1em 1em;
@@ -84,4 +88,10 @@ footer>div{
     background: transparent;
     color: #fefefe;
     margin: 2em;
+}
+.about-h2{
+    color: #fefefe;
+}
+.about-div{
+    border-bottom:3px solid #fefefe;
 }
