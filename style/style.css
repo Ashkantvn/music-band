@@ -96,7 +96,7 @@ body>div>h2{
     border-bottom:3px solid #fefefe;
 }
 /* style of cards */
-.music-cards{
+.cards{
     display: flex;
     justify-content: space-between;
     margin: 0.5em;
@@ -104,7 +104,7 @@ body>div>h2{
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
-.music-cards>button{
+.cards>button{
     cursor: pointer;
     padding: 0.4em 0.8em;
     border-radius: 5px;
@@ -114,4 +114,12 @@ body>div>h2{
     outline:none;
     border: none;
     box-shadow: 0 0 5px 1px rgba(46, 18, 172, 0.5);
+}
+.cards>h5{
+    color: #121212;
+}
+.cards>img{
+    width: 4em;
+    height: 4em;
+    object-fit: cover;
 }

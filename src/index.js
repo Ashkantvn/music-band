@@ -8,17 +8,17 @@ const data = {
         'put',            
         'row',                
     ],
-    merch:[{
+    merchs:[{
         name:'T-shirt',
         price:16.27,
-        image:'',
+        image:'../style/img/anomaly-WWesmHEgXDs-unsplash.jpg',
     },
     {
         name:'mug',
         price:13.76,
-        image:'',    
+        image:'../style/img/vanesa-giaconi-VVcggzlkYgE-unsplash.jpg',    
     }],
-    concert:[
+    concerts:[
         {
             country:'Guinea',
             date:'5/5/2102',
@@ -36,24 +36,84 @@ const data = {
         }
     ]
 }
-/////////getting html element
+/////////getting html elements
 const musicElements =[ 
     document.getElementById('indexMusicElements'),
     document.getElementById('storeMusicElements')
 ];
+const merchElements =[
+    document.getElementById('indexMerchElements'),
+    document.getElementById('storeMerchElements'),
+]
+const concertElements =[
+    document.getElementById('indexconcertElements'),
+    document.getElementById('storeconcertElements')
+]
+//////function for mapping datas 
 const makeMusicCards = ()=>{
     data.songs.map((song) =>{
         const musicCards= document.createElement('div');
         musicCards.textContent=song;
-        musicCards.classList.add('music-cards')
+        musicCards.classList.add('cards')
         if (musicElements[0]) {
             musicElements[0].appendChild(musicCards);
         } else {
             const musicCardsButton= document.createElement('button');
-            musicCardsButton.innerHTML='buy';
+            musicCardsButton.textContent='buy';
             musicCards.appendChild(musicCardsButton);
             musicElements[1].appendChild(musicCards);
         }
     })
 }
 makeMusicCards();
+
+
+const makeMerchCards = ()=>{
+    data.merchs.map((merch) =>{
+        const merchCards= document.createElement('div');
+        const merchName=document.createElement('h3');
+        const merchPrice = document.createElement('h5');
+        const merchImage = document.createElement('img');
+        merchImage.src=merch.image;
+        merchPrice.textContent='$'+ merch.price  ;
+        merchName.textContent=merch.name;
+        merchCards.appendChild(merchName);
+        merchCards.appendChild(merchImage);
+        merchCards.appendChild(merchPrice);
+        merchCards.classList.add('cards');
+        if (merchElements[0]) {
+            merchElements[0].appendChild(merchCards);
+        } else {
+            const merchCardsButton= document.createElement('button');
+            merchCardsButton.textContent='buy';
+            merchCards.appendChild(merchCardsButton);
+            merchElements[1].appendChild(merchCards);
+        }
+    })
+}
+makeMerchCards();
+
+const makeConcertsCards = ()=>{
+    data.concerts.map((concert) =>{
+        const concertCards= document.createElement('div');
+        const concertCountry=document.createElement('h3');
+        const concertDate = document.createElement('h4');
+        const concertPrice = document.createElement('h5');
+        concertDate.textContent=concert.date;
+        concertPrice.textContent='$'+ concert.price  ;
+        concertCountry.textContent=concert.country;
+        concertCards.appendChild(concertCountry);
+        concertCards.appendChild(concertDate);
+        concertCards.appendChild(concertPrice);
+        concertCards.classList.add('cards');
+        if (concertElements[0]) {
+            concertElements[0].appendChild(concertCards);
+        } else {
+            const concertCardsButton= document.createElement('button');
+            concertCardsButton.textContent='buy';
+            concertCards.appendChild(concertCardsButton);
+            concertElements[1].appendChild(concertCards);
+        }
+    })
+}
+makeConcertsCards();
