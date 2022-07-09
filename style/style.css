@@ -59,6 +59,9 @@ footer>div{
     align-items: center;
     display: flex;
 }
+main{
+    padding-bottom: 12vh;
+}
 /* index styles (home page) */
 .types{
     margin: 1em auto;
@@ -75,6 +78,9 @@ footer>div{
 /* store's part  */
 body>div>h2{
     color: #121212;
+}
+.store-main{
+    padding-bottom: 12vh;
 }
 /* page of about us style */
 .about-page{
@@ -95,6 +101,10 @@ body>div>h2{
 .about-div{
     border-bottom:3px solid #fefefe;
 }
+.about-footer{
+    display: flex;
+    flex-direction: column;
+}
 /* style of cards */
 .cards{
     display: flex;
@@ -103,6 +113,8 @@ body>div>h2{
     padding: 1em;
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .cards>button{
     cursor: pointer;
@@ -119,7 +131,7 @@ body>div>h2{
     color: #121212;
 }
 .cards>img{
-    width: 4em;
-    height: 4em;
+    width: 5em;
+    height: 5em;
     object-fit: cover;
 }
